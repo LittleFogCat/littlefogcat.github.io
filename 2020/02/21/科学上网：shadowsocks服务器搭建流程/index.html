@@ -5,15 +5,27 @@
   
 
   
-  <title>LittleFogCat&#39;s Page</title>
+  <title>科学上网：shadowsocks服务器搭建流程 | LittleFogCat&#39;s Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="LittleFogCat&#39;s Page">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="最近很闹心。一是一直白嫖的ss账号用不了了，二是github也被墙了，改host都没用。还是自己搭个梯子靠谱。 1. 服务商的选择1.1 hostwind最便宜的一个月4.5刀。这个vps是之前我用过一段时间的，速度不算特别快，但胜在稳定，而且一直没被封！但是由于价格原因放弃之。 1.2 vultr我现在用的vps，最便宜的有3.5刀的（听说有2.5bug不知道好使不），目前还没遇到什么问题，因为">
+<meta property="og:type" content="article">
+<meta property="og:title" content="科学上网：shadowsocks服务器搭建流程">
+<meta property="og:url" content="http://yoursite.com/2020/02/21/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%EF%BC%9Ashadowsocks%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B/index.html">
 <meta property="og:site_name" content="LittleFogCat&#39;s Page">
+<meta property="og:description" content="最近很闹心。一是一直白嫖的ss账号用不了了，二是github也被墙了，改host都没用。还是自己搭个梯子靠谱。 1. 服务商的选择1.1 hostwind最便宜的一个月4.5刀。这个vps是之前我用过一段时间的，速度不算特别快，但胜在稳定，而且一直没被封！但是由于价格原因放弃之。 1.2 vultr我现在用的vps，最便宜的有3.5刀的（听说有2.5bug不知道好使不），目前还没遇到什么问题，因为">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6532223-45155026c3f0336c?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6532223-94f157c80a67f02e?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6532223-3b6d930152c1cdaa?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6532223-4f2fe442e812fd68?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="article:published_time" content="2020-02-20T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-02-20T18:50:34.046Z">
 <meta property="article:author" content="littlefogcat">
+<meta property="article:tag" content="shadowsocks">
+<meta property="article:tag" content="vps">
+<meta property="article:tag" content="vpn">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/6532223-45155026c3f0336c?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternate" href="https://github.com/LittleFogCat" title="LittleFogCat&#39;s Page" type="application/atom+xml">
   
@@ -66,56 +78,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-easy_danmaku" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/21/easy_danmaku/" class="article-date">
-  <time datetime="2020-02-20T16:00:00.000Z" itemprop="datePublished">2020-02-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/21/easy_danmaku/">Android开源弹幕控件：EasyDanmaku v1.0</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>EasyDanmaku是一款开源的Android弹幕库，简单易用。<br>先放Github地址：<a href="https://github.com/LittleFogCat/EasyDanmaku" target="_blank" rel="noopener">https://github.com/LittleFogCat/EasyDanmaku</a></p>
-        
-          <p class="article-more-link">
-            <a href="/2020/02/21/easy_danmaku/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/21/easy_danmaku/" data-id="ck6v372od0000zo7k4mdxh7ju" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/" rel="tag">Android</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-科学上网：shadowsocks服务器搭建流程" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-科学上网：shadowsocks服务器搭建流程" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/02/21/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%EF%BC%9Ashadowsocks%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B/" class="article-date">
   <time datetime="2020-02-20T16:00:00.000Z" itemprop="datePublished">2020-02-21</time>
@@ -132,8 +95,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/21/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%EF%BC%9Ashadowsocks%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B/">科学上网：shadowsocks服务器搭建流程</a>
+    <h1 class="article-title" itemprop="name">
+      科学上网：shadowsocks服务器搭建流程
     </h1>
   
 
@@ -202,11 +165,23 @@
     </footer>
   </div>
   
-</article>
-
+    
+<nav id="article-nav">
+  
+    <a href="/2020/02/21/easy_danmaku/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Android开源弹幕控件：EasyDanmaku v1.0
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
   
-
+</article>
 
 </section>
         
