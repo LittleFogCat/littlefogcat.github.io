@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Android开源弹幕控件：EasyDanmaku v1.0 | LittleFogCat&#39;s Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="EasyDanmaku是一款开源的Android弹幕库，简单易用。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android开源弹幕控件：EasyDanmaku v1.0">
+<meta property="og:url" content="http://yoursite.com/2020/02/21/easy_danmaku/index.html">
+<meta property="og:site_name" content="LittleFogCat&#39;s Page">
+<meta property="og:description" content="EasyDanmaku是一款开源的Android弹幕库，简单易用。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-02-20T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-02-20T18:43:23.688Z">
+<meta property="article:author" content="littlefogcat">
+<meta property="article:tag" content="Android">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="https://github.com/LittleFogCat" title="LittleFogCat&#39;s Page" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="https://github.com/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">LittleFogCat&#39;s Page</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">默默无闻的开发者</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="https://github.com/LittleFogCat" target="_blank" rel="noopener" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-easy_danmaku" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/21/easy_danmaku/" class="article-date">
+  <time datetime="2020-02-20T16:00:00.000Z" itemprop="datePublished">2020-02-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Android开源弹幕控件：EasyDanmaku v1.0
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>EasyDanmaku是一款开源的Android弹幕库，简单易用。<br>先放Github地址：<a href="https://github.com/LittleFogCat/EasyDanmaku" target="_blank" rel="noopener">https://github.com/LittleFogCat/EasyDanmaku</a></p>
+<a id="more"></a>
+
+<h1 id="EasyDanmaku"><a href="#EasyDanmaku" class="headerlink" title="EasyDanmaku"></a>EasyDanmaku</h1><p>一个方便简单的Android弹幕控件，顾名思义so easy</p>
+<h3 id="用法两部曲"><a href="#用法两部曲" class="headerlink" title="用法两部曲"></a>用法两部曲</h3><h4 id="1、在布局中引入一个FrameLayout作为弹幕容器"><a href="#1、在布局中引入一个FrameLayout作为弹幕容器" class="headerlink" title="1、在布局中引入一个FrameLayout作为弹幕容器"></a>1、在布局中引入一个FrameLayout作为弹幕容器</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">FrameLayout</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">"@+id/container"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2、代码中使用"><a href="#2、代码中使用" class="headerlink" title="2、代码中使用"></a>2、代码中使用</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1、设置一个FrameLayout为弹幕容器</span></span><br><span class="line">FrameLayout container = findViewById(R.id.container);</span><br><span class="line">DanmakuManager.getInstance().setDanmakuContainer(container);</span><br><span class="line">   </span><br><span class="line"><span class="comment">// 2、发送弹幕</span></span><br><span class="line">Danmaku dam = <span class="keyword">new</span> Danmaku();</span><br><span class="line">dam.text = <span class="string">"666"</span>; </span><br><span class="line">DanmakuManager.getInstance().send(dam);</span><br></pre></td></tr></table></figure>
+
+<h4 id="就是这么easy"><a href="#就是这么easy" class="headerlink" title="就是这么easy"></a>就是这么easy</h4><p><strong>当然还有很多设置选项，具体可以参考Sample代码。</strong></p>
+<hr>
+<h4 id="如果想要更easy，你可以直接在布局中引入DanmakuLayout"><a href="#如果想要更easy，你可以直接在布局中引入DanmakuLayout" class="headerlink" title="如果想要更easy，你可以直接在布局中引入DanmakuLayout"></a>如果想要更easy，你可以直接在布局中引入DanmakuLayout</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">top.littlefogcat.danmakulib.danmaku.DanmakuLayout</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">"@+id/danmakuLayout"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"0dp"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_weight</span>=<span class="string">"1"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:background</span>=<span class="string">"#eee"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="然后"><a href="#然后" class="headerlink" title="然后"></a>然后</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mDanmakuLayout = findViewById(R.id.danmakuLayout);</span><br><span class="line">mDanmakuLayout.send(<span class="string">"test"</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="不过我不推荐这么做，因为这个Layout有很多问题，比如旋转屏幕之后就显示异常之类的，有兴趣的话可以自己改着玩。"><a href="#不过我不推荐这么做，因为这个Layout有很多问题，比如旋转屏幕之后就显示异常之类的，有兴趣的话可以自己改着玩。" class="headerlink" title="不过我不推荐这么做，因为这个Layout有很多问题，比如旋转屏幕之后就显示异常之类的，有兴趣的话可以自己改着玩。"></a>不过我不推荐这么做，因为这个Layout有很多问题，比如旋转屏幕之后就显示异常之类的，有兴趣的话可以自己改着玩。</h4>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/02/21/easy_danmaku/" data-id="ck6v5ivkq0000mg7kgdxj34nm" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/" rel="tag">Android</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/02/21/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%EF%BC%9Ashadowsocks%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">科学上网：shadowsocks服务器搭建流程</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BB%BC%E5%90%88/">综合</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/" rel="tag">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/" rel="tag">shadowsocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vpn/" rel="tag">vpn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vps/" rel="tag">vps</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/vps/" style="font-size: 10px;">vps</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/02/21/easy_danmaku/">Android开源弹幕控件：EasyDanmaku v1.0</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/21/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%EF%BC%9Ashadowsocks%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B/">科学上网：shadowsocks服务器搭建流程</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 littlefogcat<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
