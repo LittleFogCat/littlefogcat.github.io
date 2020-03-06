@@ -276,7 +276,7 @@
 		document.getElementById("page_view").innerHTML = arrival;
 	}
 	
-	href = window.btoa(href);
+	href = encodeURIComponent(href);
 	
 	var src = "https://106.14.152.93:8443/third/githubio/arrival?callback=handleCallback&articleUrl=" + href +
 	    "&ip=" + returnCitySN["cip"];
