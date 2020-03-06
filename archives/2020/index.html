@@ -206,17 +206,11 @@
 		var arrival = jsonData.arrival;
 		document.getElementById("page_view").innerHTML = arrival;
 	}
-
-	function getIp() {
-		returnCitySN["cip"]
-	}
-
-	var jsonpScript =
-		"<script type=\"text/javascript\" src = \"https://106.14.152.93:8443/third/githubio/arrival?callback=handleCallback&articleUrl=" +
-		href + "&ip=" + getIp() +
-		"\"> <\ / script > ";
-
-	document.write(jsonpScript);
+	
+	var server = "https://106.14.152.93:8443/third/githubio/arrival?callback=handleCallback&articleUrl=" + href +
+	    "&ip=" + returnCitySN["cip"];
+	
+	document.write("<script type=\"text/javascript\" src=\"" + src + "\"><\/script>");
 
   </script>
 </footer>
