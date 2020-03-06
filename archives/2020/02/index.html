@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <script src="http://pv.sohu.com/cityjson?ie=utf-8" type="text/javascript"></script>
   
 
   
@@ -28,6 +29,7 @@
   
 <link rel="stylesheet" href="/css/style.css">
 
+  
 <meta name="generator" content="Hexo 4.2.0"></head>
 
 <body>
@@ -196,7 +198,27 @@
     </div>
     <span>&nbsp;&nbsp;本页访问量<span id="page_view"></span>次</span>
   </div>
-  <script src="/js/page_view.js"></script>
+  <script type="text/javascript">
+	var href = window.location.href;
+
+	function handleCallback(jsonData) {
+		console.log("jsonData = " + jsonData);
+		var arrival = jsonData.arrival;
+		document.getElementById("page_view").innerHTML = arrival;
+	}
+
+	function getIp() {
+		returnCitySN["cip"]
+	}
+
+	var jsonpScript =
+		"<script type=\"text/javascript\" src = \"https://106.14.152.93:8443/third/githubio/arrival?callback=handleCallback&articleUrl=" +
+		href + "&ip=" + getIp() +
+		"\"> <\ / script > ";
+
+	document.write(jsonpScript);
+
+  </script>
 </footer>
     </div>
     <nav id="mobile-nav">

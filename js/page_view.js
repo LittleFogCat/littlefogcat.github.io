@@ -1,9 +1,14 @@
-var href = window.location.href;
+var href = window.location.href; // 页面地址
 
 function handleCallback(jsonData) {
+	console.log("jsonData = " + jsonData);
 	var arrival = jsonData.arrival;
 	document.getElementById("page_view").innerHTML = arrival;
 }
 
-var jsonpScript = "<script type=\"text/javascript\" src=\"http://106.14.152.93:8443/third/githubio/arrival?callback=handleCallback&articleUrl=" + href + "\"><\/script>";
-document.write(jsonpScript);
+var arrivalServer = "https://106.14.152.93:8443/third/githubio/arrival?callback=handleCallback&articleUrl=" + href;
+if(returnCitySN) {
+	arrivalServer = arrivalServer + "&ip=" + returnCitySN["cip"];
+}
+
+document.write("<script type=\"text/javascript\" src=\"" + src + "\"><\/script>");
