@@ -6,7 +6,7 @@ function handleCallback(jsonData) {
 	document.getElementById("page_view").innerHTML = arrival;
 }
 
-var arrivalServer = "https://106.14.152.93:8443/third/githubio/arrival?callback=handleCallback&articleUrl=" + href;
+var arrivalServer = "https://47.101.216.186:8443/third/githubio/arrival?callback=handleCallback&articleUrl=" + href;
 if(returnCitySN) {
 	arrivalServer = arrivalServer + "&ip=" + returnCitySN["cip"];
 }
