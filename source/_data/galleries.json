@@ -1,0 +1,28 @@
+[{
+  "name": "colorful",
+  "cover": "/images/theme/post-image.jpg", 
+  "description": "君未看花时，花与君同寂；君来看花日，花色一时明。",
+  "photos": [ 
+    "/images/theme/1.jpg",
+    "/images/theme/2.jpg",
+    "/images/theme/3.jpg",
+    "/images/theme/4.jpg",
+    "/images/theme/5.jpg",
+    "/images/theme/6.jpg",
+    "/images/theme/7.jpg",
+    "/images/theme/8.jpg"
+  ]
+}, {
+  "name": "记事",
+  "cover": "/images/theme/post-image.jpg",
+  "description": "翻开随身携带的记事本，写着许多事都是关于你。",
+  "photos": [
+    "/images/theme/9.jpg",
+    "/images/theme/10.jpg",
+    "/images/theme/11.jpg",
+    "/images/theme/12.jpg",
+    "/images/theme/13.jpg",
+    "/images/theme/14.jpg",
+    "/images/theme/15.jpg"
+  ]
+}]

@@ -3,6 +3,7 @@ title: 极简Android开源弹幕控件：EasyDanmaku
 date: 2023-12-12 01:10:08
 tags: [Android, 开源]
 categories: Android
+top: 10
 ---
 
 EasyDanmaku是一款开源的Android弹幕库，简单易用。经测试，在开启字幕描边的情况下，0.2.0版本在模拟器上能同屏显示500条弹幕而保持满帧率；在真机小米mix2上，同屏显示约1300+条弹幕（不描边则为2500+条）时，才开始出现丢帧。
