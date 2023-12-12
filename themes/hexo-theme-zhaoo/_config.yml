@@ -30,11 +30,11 @@ color:
 
 # Favicon
 favicon:
-  small: /images/icons/favicon-16x16.png
-  medium: /images/icons/favicon-32x32.png
-  apple_touch_icon: /images/icons/apple-touch-icon.png
-  safari_pinned_tab: /images/icons/stun-logo.svg
-  msapplication: /images/icons/favicon-144x144.png
+  small: /images/icons/niu.jpg
+  medium: /images/icons/niu.jpg
+  apple_touch_icon: /images/icons/niu.jpg
+  safari_pinned_tab: /images/icons/niu.jpg
+  msapplication: /images/icons/niu.jpg
 
 # Font
 font:
@@ -103,8 +103,8 @@ search:
 # QR Code
 qrcode:
   enable: true
-  type: url # url | image
-  image: https://pic.izhaoo.com/weapp-code.jpg
+  type: image # url | image
+  image: /images/theme/qrcode.png
 
 # Color Mode
 color_mode:
@@ -151,7 +151,7 @@ toc:
 donate:
   enable: true
   alipay: https://pic.izhaoo.com/alipay.jpg
-  wechat: https://pic.izhaoo.com/wechat.jpg
+  wechat: /images/theme/wechat.png
 
 # Copyright
 post_copyright:
